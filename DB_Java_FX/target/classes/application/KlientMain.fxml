@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane fx:id="klient" prefHeight="800.0" prefWidth="800.0" stylesheets="@application.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.KlientMain">
+   <children>
+      <Accordion layoutX="12.0" layoutY="70.0" prefHeight="611.0" prefWidth="777.0">
+         <panes>
+            <TitledPane animated="false" prefHeight="621.0" prefWidth="1014.0" text="Pokaż oferty">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="tableOferty" layoutX="307.0" layoutY="30.0" prefHeight="415.0" prefWidth="447.0">
+                           <columns>
+                              <TableColumn fx:id="tableIdOferty" prefWidth="126.0" text="ID Oferty" />
+                              <TableColumn fx:id="tableIdLeku" prefWidth="99.0" text="ID leku" />
+                              <TableColumn fx:id="columnNazwaOf" prefWidth="98.0" text="Nazwa" />
+                              <TableColumn fx:id="tableCena" prefWidth="123.0" text="Cena" />
+                           </columns>
+                        </TableView>
+                        <Button fx:id="buttonOferty" layoutX="23.0" layoutY="169.0" mnemonicParsing="false" onAction="#buttonOfertyCllick" prefHeight="44.0" prefWidth="248.0" text="Pobierz ofertę">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Button>
+                     </children></AnchorPane>
+               </content>
+            </TitledPane>
+            <TitledPane animated="false" text="Wyświetl informacje o leku ">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Label layoutX="78.0" layoutY="100.0" prefHeight="78.0" prefWidth="191.0" text="Podaj id leku">
+                           <font>
+                              <Font size="29.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="idlekuField" layoutX="86.0" layoutY="230.0" prefHeight="45.0" prefWidth="174.0" />
+                        <TableView fx:id="tableLek" layoutX="348.0" layoutY="43.0" prefHeight="386.0" prefWidth="374.0">
+                           <columns>
+                              <TableColumn fx:id="tableIdLek" prefWidth="67.0" text="Id_leku" />
+                              <TableColumn fx:id="tableNazwa" prefWidth="140.0" text="Nazwa" />
+                              <TableColumn fx:id="tableGramatura" prefWidth="166.0" text="Gramatura" />
+                           </columns>
+                        </TableView>
+                        <Button fx:id="buttonLek" layoutX="70.0" layoutY="353.0" mnemonicParsing="false" onAction="#buttonLekClick" prefHeight="33.0" prefWidth="206.0" text="Pobierz informacje">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Button>
+                     </children></AnchorPane>
+               </content>
+            </TitledPane>
+            <TitledPane animated="false" text="Dodaj do koszyka i zamów">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Label layoutX="229.0" layoutY="177.0" text="Podaj id oferty">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="koszykIdOfertyField" layoutX="397.0" layoutY="178.0" />
+                        <TextField fx:id="koszykIloscField" layoutX="397.0" layoutY="230.0" />
+                        <Label layoutX="229.0" layoutY="224.0" prefHeight="38.0" prefWidth="106.0" text="Podaj ilość">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="278.0" layoutY="33.0" text="Dodaj do koszyka">
+                           <font>
+                              <Font size="28.0" />
+                           </font>
+                        </Label>
+                        <Button fx:id="buttonDodaj" layoutX="352.0" layoutY="376.0" mnemonicParsing="false" onAction="#buttonDodajClick" text="Dodaj">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Button>
+                     </children></AnchorPane>
+               </content>
+            </TitledPane>
+            <TitledPane animated="false" prefHeight="486.0" prefWidth="973.0" text="Pokaż własne zamówienia">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="tableZamowienie" layoutX="53.0" layoutY="113.0" prefHeight="211.0" prefWidth="684.0">
+                           <columns>
+                              <TableColumn fx:id="tableIdZamowienia" prefWidth="122.0" text="Id_zamówienia" />
+                              <TableColumn fx:id="tableIdKlienta" prefWidth="87.0" text="Id_klienta" />
+                              <TableColumn fx:id="tableIdKoszyka" prefWidth="108.0" text="id_koszyka" />
+                              <TableColumn fx:id="tableWaga" prefWidth="75.0" text="waga" />
+                              <TableColumn fx:id="tableDataZ" prefWidth="101.0" text="data_złożenia" />
+                              <TableColumn fx:id="tableDataR" prefWidth="108.0" text="data_realizacji" />
+                              <TableColumn fx:id="tableStan" prefWidth="75.0" text="Stan" />
+                           </columns>
+                        </TableView>
+                        <Label layoutX="285.0" layoutY="25.0" prefHeight="59.0" prefWidth="220.0" text="Twoje zamówienia">
+                           <font>
+                              <Font size="26.0" />
+                           </font>
+                        </Label>
+                        <Button fx:id="buttonZamowienie" layoutX="277.0" layoutY="356.0" mnemonicParsing="false" onAction="#buttonZamowienieClick" prefHeight="32.0" prefWidth="222.0" text="Pobierz informacje ">
+                           <font>
+                              <Font size="21.0" />
+                           </font>
+                        </Button>
+                     </children></AnchorPane>
+               </content>
+            </TitledPane>
+            <TitledPane animated="false" text="Wyświetl szczegóły o zamówieniu">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="tabela" layoutX="-1.0" layoutY="228.0" prefHeight="200.0" prefWidth="777.0">
+                          <columns>
+                             <TableColumn fx:id="ZamowienieColumn" prefWidth="91.0" text="Id Zamowienia" />
+                             <TableColumn fx:id="klientColumn" prefWidth="68.0" text="Id Klienta" />
+                             <TableColumn fx:id="wagaColumn" prefWidth="61.0" text="Waga" />
+                             <TableColumn fx:id="zloenieColumn" prefWidth="102.0" text="Data Zlozenia" />
+                             <TableColumn fx:id="realizacjiaColumn" prefWidth="108.0" text="Data Realizacji" />
+                             <TableColumn fx:id="stanColumn" prefWidth="57.0" text="Stan" />
+                             <TableColumn fx:id="columnIlosc" prefWidth="71.0" text="Ilosc" />
+                             <TableColumn fx:id="columnKoszt" prefWidth="62.0" text="Koszt" />
+                             <TableColumn fx:id="columnNazwa" prefWidth="82.0" text="Nazwa" />
+                             <TableColumn fx:id="columnGramatura" prefWidth="75.0" text="Gramatura" />
+                          </columns>
+                        </TableView>
+                        <TextField fx:id="idzamowieniaField" layoutX="313.0" layoutY="131.0" />
+                        <Button fx:id="buttonZatwierdz" layoutX="341.0" layoutY="184.0" mnemonicParsing="false" onAction="#buttonZatwierdzClick" prefHeight="25.0" prefWidth="89.0" text="Zatwierdz" />
+                        <Label layoutX="238.0" layoutY="75.0" text="Wprowadź ID zamówienia, które chcesz wyświetlić">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Label>
+                     </children></AnchorPane>
+              </content>
+            </TitledPane>
+            <TitledPane animated="false" text="Zmień hasło">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Label layoutX="303.0" layoutY="108.0" prefHeight="54.0" prefWidth="171.0" text="Podaj nowe hasło">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="changePasswordField" layoutX="267.0" layoutY="230.0" prefHeight="48.0" prefWidth="241.0" />
+                        <Button fx:id="buttonConfirmPassword" layoutX="306.0" layoutY="353.0" mnemonicParsing="false" onAction="#changePasswordClick" prefHeight="41.0" prefWidth="164.0" text="Zmień hasło">
+                           <font>
+                              <Font size="21.0" />
+                           </font>
+                        </Button>
+                     </children></AnchorPane>
+               </content>
+            </TitledPane>
+            <TitledPane animated="false" text="Zarządzaj kontem">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Button fx:id="buttonLoggout" layoutX="302.0" layoutY="177.0" mnemonicParsing="false" onAction="#buttonLoggoutClick" prefHeight="40.0" prefWidth="172.0" text="Wyloguj">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Button>
+                     </children></AnchorPane>
+               </content>
+            </TitledPane>
+         </panes>
+      </Accordion>
+   </children>
+</AnchorPane>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane fx:id="admin" prefHeight="800.0" prefWidth="800.0" style="-fx-background-image: \@admin;" stylesheets="@application.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.AdminZmianaZamowienia">
+    <children>
+        <Button fx:id="wrocButton" layoutX="14.0" layoutY="754.0" mnemonicParsing="false" onAction="#wrocButtonClick" text="Wroc" />
+        <Button fx:id="zmienDateRealizacjiZamowieniaButtonClick" layoutX="523.0" layoutY="543.0" mnemonicParsing="false" onAction="#zmienDateRealizacjiZamowieniaButtonClick" text="Zatwierdz" />
+          <TextField fx:id="dataTextField" layoutX="195.0" layoutY="480.0" prefHeight="25.0" prefWidth="382.0" promptText="rrrr-mm-dd" />
+          <Text fill="WHITE" layoutX="294.0" layoutY="434.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Wprowadz nowa date">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Text>
+          <TextField fx:id="IdZamowieniaTextField" layoutX="195.0" layoutY="351.0" prefWidth="382.0" promptText="ID Zamowienia" />
+          <Text fill="WHITE" layoutX="66.0" layoutY="311.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Wprowadz ID zamowienia ktorego date realizacji chcesz zmienic">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Text>
+    </children>
+</AnchorPane>

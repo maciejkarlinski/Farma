@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane fx:id="magazyn" prefHeight="800.0" prefWidth="800.0" stylesheets="@application.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.StoreWyswietlSurowce">
+    <children>
+        <TableView fx:id="tabela" layoutX="14.0" layoutY="9.0" prefHeight="745.0" prefWidth="773.0">
+            <columns>
+                <TableColumn fx:id="idsurowcaColumn" prefWidth="67.0" text="Id surowca" />
+                <TableColumn fx:id="nazwaColumn" prefWidth="223.0" text="Nazwa" />
+                <TableColumn fx:id="pozycjanamagazynieColumn" prefWidth="136.0" text="Pozycja na magazynie" />
+                <TableColumn fx:id="dataColumn" prefWidth="157.0" text="Data przydatności" />
+                <TableColumn fx:id="dostawcaColumn" prefWidth="189.0" text="Dostawca" />
+            </columns>
+        </TableView>
+        <Button fx:id="wroc" layoutX="14.0" layoutY="757.0" mnemonicParsing="false" onAction="#wroc" prefHeight="29.0" prefWidth="74.0" text="Wroc" />
+        <Button fx:id="refresh1" layoutX="712.0" layoutY="757.0" mnemonicParsing="false" onAction="#refresh" prefHeight="29.0" prefWidth="74.0" text="Odswież" />
+    </children>
+</AnchorPane>

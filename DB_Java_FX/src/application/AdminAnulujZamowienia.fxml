@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="admin" prefHeight="800.0" prefWidth="800.0" style="-fx-background-image: \@admin;" stylesheets="@application.css" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.AdminAnulujZamowienia">    <children>
+        <TextField fx:id="textField" layoutX="281.0" layoutY="388.0" prefHeight="25.0" prefWidth="240.0" promptText="Wprowadz ID " />
+        <Text fill="WHITE" fontSmoothingType="LCD" layoutX="174.0" layoutY="318.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Wprowadz ID Zamowienia ktore chcesz usunac" textAlignment="CENTER">
+         <font>
+            <Font size="22.0" />
+         </font></Text>
+        <Button fx:id="usunButton" layoutX="379.0" layoutY="464.0" mnemonicParsing="false" onAction="#usunButtonClick" text="Usun" />
+        <Button fx:id="wrocButton" layoutY="774.0" mnemonicParsing="false" onAction="#wrocButtonClick" text="Wroc" />
+    </children>
+</AnchorPane>

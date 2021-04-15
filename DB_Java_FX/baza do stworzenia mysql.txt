@@ -1,0 +1,103 @@
+CREATE DATABASE IF NOT EXISTS firmafarm DEFAULT CHARACTER SET utf8 COLLATE utf8_unicode_ci;
+USE firmafarm;
+
+
+CREATE TABLE Dostawca(
+	id_dostawcy INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
+    nazwa VARCHAR(50) NOT NULL,
+    NIP INT NOT NULL,
+    kraj VARCHAR(50) NOT NULL,
+    adres VARCHAR(100) NOT NULL
+);
+CREATE TABLE Surowiec(
+	id_surowca INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
+    nazwa VARCHAR(50) NOT NULL,
+    id_dostawcy INT, FOREIGN KEY (id_dostawcy) REFERENCES Dostawca(id_dostawcy),
+    pozycja_na_magazynie INT,
+    data_przydatnosci DATE NOT NULL
+);
+CREATE TABLE Dostawa(
+	id_dostawy INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
+    data_dostawy DATE NOT NULL,
+    id_dostawcy INT NOT NULL, FOREIGN KEY (id_dostawcy) REFERENCES Dostawca(id_dostawcy),
+    id_surowca INT NOT NULL, FOREIGN KEY (id_surowca) REFERENCES Surowiec(id_surowca),
+    ilosc INT DEFAULT '0',
+    nr_serii INT NOT NULL
+);
+CREATE TABLE Faktura_firma(
+	id_faktury INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
+	nr_faktury VARCHAR(20) NOT NULL,
+    id_dostawy INT NOT NULL, FOREIGN KEY (id_dostawy) REFERENCES Dostawa(id_dostawy)
+);
+CREATE TABLE Firma(
+	NIP INT PRIMARY KEY NOT NULL,
+    nazwa VARCHAR(40) NOT NULL,
+    adres VARCHAR(100) NOT NULL,
+    miasto VARCHAR(50) NOT NULL,
+    kod_pocztowy VARCHAR(10) NOT NULL,
+    regon INT NOT NULL,
+    data_zalozenia DATE NOT NULL
+);
+CREATE TABLE Lek(
+	id_leku INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
+    nazwa VARCHAR(40) NOT NULL,
+    gramatura INT NOT NULL
+);
+CREATE TABLE Oferta(
+	id_oferty INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    id_leku INT NOT NULL, FOREIGN KEY (id_leku) REFERENCES Lek(id_leku),
+    cena DOUBLE NOT NULL DEFAULT '0'
+);
+CREATE TABLE Koszyk(
+	id_koszyka INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
+    id_oferty INT, FOREIGN KEY (id_oferty) REFERENCES Oferta(id_oferty),
+    ilosc INT DEFAULT '0',
+    koszt DOUBLE DEFAULT '0'
+);
+CREATE TABLE Osoba(
+    id_osoby INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
+    imie VARCHAR(20) NOT NULL,
+    nazwisko VARCHAR(30) NOT NULL,
+    e_mail VARCHAR(30),
+    nr_tel INT,
+    pesel INT,
+    haslo VARCHAR(30) NOT NULL,
+    status_konta INT NOT NULL
+);
+CREATE TABLE Pracownik(
+	id_pracownika INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
+    id_osoby INT NOT NULL, FOREIGN KEY (id_osoby) REFERENCES Osoba(id_osoby),
+    wynagrodzenie INT NOT NULL DEFAULT '0',
+    stanowisko VARCHAR(30) NOT NULL
+);
+CREATE TABLE Klient(
+	id_klienta INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
+    id_osoby INT NOT NULL, FOREIGN KEY (id_osoby) REFERENCES Osoba(id_osoby),
+    NIP INT
+);
+CREATE TABLE Zamowienie(
+	id_zamowienia INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
+    id_klienta INT NOT NULL, FOREIGN KEY (id_klienta) REFERENCES Klient(id_klienta),
+    id_koszyka INT NOT NULL, FOREIGN KEY (id_koszyka) REFERENCES Koszyk(id_koszyka),
+    waga DOUBLE NOT NULL DEFAULT '0',
+    data_zlozenia DATE NOT NULL,
+    data_realizacji DATE,
+    stan INT DEFAULT '0'
+);
+CREATE TABLE Faktura_klient(
+	id_faktury INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
+    nr_faktury VARCHAR(20) NOT NULL,
+    id_klienta INT NOT NULL, FOREIGN KEY (id_klienta) REFERENCES Klient(id_klienta),
+    id_zamowienia INT NOT NULL, FOREIGN KEY (id_zamowienia) REFERENCES Zamowienie(id_zamowienia)
+);
+
+
+
+insert into Osoba VALUES(NULL,'Administrator','Admin','adm@adm',1,11,'admin',0);
+insert into Pracownik VALUES(NULL,1,5000,'admin');
+
+
+
+
+
+/*DROP DATABASE firmafarm;

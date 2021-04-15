@@ -1,0 +1,1237 @@
+@startuml
+
+title __APPLICATION's Class Diagram__\n
+
+  namespace application {
+    class application.AdminAnulujZamowienia {
+        + textField : TextField
+        + usunButton : Button
+        + wrocButton : Button
+        + initialize()
+        + usunButtonClick()
+        + wrocButtonClick()
+    }
+  }
+  
+
+  namespace application {
+    class application.AdminDodajDostawce {
+        + adressTextField : TextField
+        + countryTextField : TextField
+        + dodajButton : Button
+        + nameTextField : TextField
+        + nipTextField : TextField
+        + wrocButton : Button
+        + dodajButtonClick()
+        + initialize()
+        + wrocButtonClick()
+    }
+  }
+  
+
+  namespace application {
+    class application.AdminDodajPracownika {
+        + dodajButton : Button
+        + emailTextField : TextField
+        + hasloTextField : TextField
+        + nameTextField : TextField
+        + nazwiskoTextField : TextField
+        + numerTextField : TextField
+        + peselTextField : TextField
+        + stanowiskoTextField : TextField
+        + wrocButton : Button
+        + wynagrodzenieTextField : TextField
+        + dodajButtonClick()
+        + initialize()
+        + wrocButtonClick()
+    }
+  }
+  
+
+  namespace application {
+    class application.AdminMain {
+        + anulujZamowieniaField : Button
+        + dodajDostawceField : Button
+        + dodajPracownikaField : Button
+        + edycjaZamowienField : Button
+        + odblokujKontoField : Button
+        + szczegolyZamowienia : Button
+        + usunDostawceField : Button
+        + usunPracownikaField : Button
+        + wylogujField : Button
+        + wyswietlDostawcowField : Button
+        + wyswietlKlientowButton : Button
+        + wyswietlKontaField : Button
+        + wyswietlLabel : Label
+        + wyswietlPracownikowField : Button
+        + wyswietlZamowieniaField : Button
+        + zablokujKontoField : Button
+        + zmianaWyplatyField : Button
+        + zmienHasloField : Button
+        + AnulujZamowieniaButtonClick()
+        + DodajDostawceClick()
+        + DodajPracownikaButtonClick()
+        + EdycjaZamowieniaButtonClick()
+        + OdblokujKontaButtonClick()
+        + UsunDostawceButtonClick()
+        + UsunPracownikaClick()
+        + WylogujButtonClick()
+        + WyswietlDostawceButtonClick()
+        + WyswietlPracownikaButtonClick()
+        + WyswietlZamowieniaButtonClick()
+        + ZablokujKontaButtonClick()
+        + ZmianaHaslaButtonClick()
+        + ZmianaWyplatyPracownikaButtonClick()
+        + initialize()
+        + szczegolyZamowieniaClick()
+        + wyswietlKlientowButtonClick()
+        ~ WyswietlKontaButtonClick()
+    }
+  }
+  
+
+  namespace application {
+    class application.AdminSzczegolyZamowienia {
+        + ZamowienieColumn : TableColumn
+        + buttonZatwierdz : Button
+        + columnGramatura : TableColumn
+        + columnIlosc : TableColumn
+        + columnKoszt : TableColumn
+        + columnNazwa : TableColumn
+        + idzamowieniaField : TextField
+        + klientColumn : TableColumn
+        + realizacjiaColumn : TableColumn
+        + stanColumn : TableColumn
+        + tabela : TableView
+        + wagaColumn : TableColumn
+        + wroc : Button
+        + zloenieColumn : TableColumn
+        + buttonZatwierdzClick()
+        + getZamowienie()
+        + initialize()
+        + wroc()
+    }
+  }
+  
+
+  namespace application {
+    class application.AdminUsunDostawce {
+        + textField : TextField
+        + usunButton : Button
+        + wrocButton : Button
+        + initialize()
+        + usunButtonClick()
+        + wrocButtonClick()
+    }
+  }
+  
+
+  namespace application {
+    class application.AdminUsunPracownika {
+        + textField : TextField
+        + usunButton : Button
+        + wrocButton : Button
+        + initialize()
+        + usunButtonClick()
+        + wrocButtonClick()
+    }
+  }
+  
+
+  namespace application {
+    class application.AdminWyswietlDostawce {
+        + CountyColumn : TableColumn
+        + NipColumn : TableColumn
+        + adresColumn : TableColumn
+        + idColumn : TableColumn
+        + nameColumn : TableColumn
+        + refresh : Button
+        + tabela : TableView
+        + wroc : Button
+        + getDostawca()
+        + initialize()
+        + refresh()
+        + wroc()
+    }
+  }
+  
+
+  namespace application {
+    class application.AdminWyswietlKlientow {
+        + idColumn : TableColumn
+        + idosobyColumn : TableColumn
+        + imieColumn : TableColumn
+        + mailColumn : TableColumn
+        + nazwiskoColumn : TableColumn
+        + nipColumn : TableColumn
+        + refresh : Button
+        + tabela : TableView
+        + telefonColumn : TableColumn
+        + wroc : Button
+        + getKlienci()
+        + initialize()
+        + refresh()
+        + wroc()
+    }
+  }
+  
+
+  namespace application {
+    class application.AdminWyswietlKonta {
+        + TextField : Label
+        + hasloColumn : TableColumn<OsobaFX, String>
+        + idColumn : TableColumn<OsobaFX, String>
+        + lastnameColumn : TableColumn<OsobaFX, String>
+        + mailColumn : TableColumn<OsobaFX, String>
+        + nameColumn : TableColumn<OsobaFX, String>
+        + peselColumn : TableColumn<OsobaFX, String>
+        + refresh : Button
+        + statusColumn : TableColumn<OsobaFX, String>
+        + tabela : TableView<OsobaFX>
+        + telColumn : TableColumn<OsobaFX, String>
+        + wroc : Button
+        + getKonta()
+        + initialize()
+        + refresh()
+        + wroc()
+    }
+  }
+  
+
+  namespace application {
+    class application.AdminWyswietlPracownikow {
+        + imieColumn : TableColumn
+        + nazwiskoColumn : TableColumn
+        + osobaColumn : TableColumn
+        + pieniazkiColumn : TableColumn
+        + pracownikColumn : TableColumn
+        + refresh : Button
+        + stanowiskoColumn : TableColumn
+        + tabela : TableView
+        + wroc : Button
+        + getPracownika()
+        + initialize()
+        + refresh()
+        + wroc()
+    }
+  }
+  
+
+  namespace application {
+    class application.AdminWyswietlZamowienia {
+        + ZamowienieColumn : TableColumn
+        + klientColumn : TableColumn
+        + koszykColumn : TableColumn
+        + realizacjiaColumn : TableColumn
+        + refresh1 : Button
+        + stanColumn : TableColumn
+        + tabela : TableView
+        + wagaColumn : TableColumn
+        + wroc : Button
+        + zloenieColumn : TableColumn
+        + getZamowienia()
+        + initialize()
+        + refresh()
+        + wroc()
+    }
+  }
+  
+
+  namespace application {
+    class application.AdminZablokujOdblokuj {
+        + ZablokujButton : Button
+        + odblokujButton : Button
+        + textField : TextField
+        + wrocButton : Button
+        + initialize()
+        + odblokuj()
+        + wrocButtonClick()
+        + zablokujButtonClick()
+    }
+  }
+  
+
+  namespace application {
+    class application.AdminZmianaHasla {
+        + confpassTextField : TextField
+        + passTextField : TextField
+        + wrocButton : Button
+        + zmienhasloButton : Button
+        + initialize()
+        + wrocButtonClick()
+        + zmienhasloButtonClick()
+    }
+  }
+  
+
+  namespace application {
+    class application.AdminZmianaZamowienia {
+        + IdZamowieniaTextField : TextField
+        + dataTextField : TextField
+        + wrocButton : Button
+        + zmienDateRealizacjiZamowieniaButtonClick : Button
+        + initialize()
+        + wrocButtonClick()
+        + zmienDateRealizacjiZamowieniaButtonClick()
+    }
+  }
+  
+
+  namespace application {
+    class application.AdminZmienWyplate {
+        + IdPracownikaTextField : TextField
+        + confkwotaTextField : TextField
+        + kwotaTextField : TextField
+        + wrocButton : Button
+        + zmienWyplateButton : Button
+        + initialize()
+        + wrocButtonClick()
+        + zmienWyplateButtonClick()
+    }
+  }
+  
+
+  namespace application {
+    class application.DostawaFX {
+        ~ data_dostawy : String
+        ~ id_dostawcy : String
+        ~ id_dostawy : String
+        ~ id_surowca : String
+        ~ ilosc : String
+        ~ nazwadostawcy : String
+        ~ nazwasurowca : String
+        ~ nr_serii : String
+        + DostawaFX()
+        + DostawaFX()
+        + getData_dostawy()
+        + getId_dostawcy()
+        + getId_dostawy()
+        + getId_surowca()
+        + getIlosc()
+        + getNazwadostawcy()
+        + getNazwasurowca()
+        + getNr_serii()
+        + setData_dostawy()
+        + setId_dostawcy()
+        + setId_dostawy()
+        + setId_surowca()
+        + setIlosc()
+        + setNazwadostawcy()
+        + setNazwasurowca()
+        + setNr_serii()
+        + toString()
+    }
+  }
+  
+
+  namespace application {
+    class application.DostawcaFX {
+        ~ adres : String
+        ~ id_dostawcy : String
+        ~ kraj : String
+        ~ nazwa : String
+        ~ nip : String
+        + DostawcaFX()
+        + getAdres()
+        + getId_dostawcy()
+        + getKraj()
+        + getNazwa()
+        + getNip()
+        + setAdres()
+        + setId_dostawcy()
+        + setKraj()
+        + setNazwa()
+        + setNip()
+    }
+  }
+  
+
+  namespace application {
+    class application.FakturaFX {
+        # id_faktury : String
+        # nr_faktury : String
+        + FakturaFX()
+        + FakturaFX()
+        + getId_faktury()
+        + getNr_faktury()
+        + setId_faktury()
+        + setNr_faktury()
+    }
+  }
+  
+
+  namespace application {
+    class application.FakturaKlientFX {
+        ~ email : String
+        ~ id_zamowienia : String
+        ~ imie : String
+        ~ nazwisko : String
+        ~ nip : String
+        + FakturaKlientFX()
+        + FakturaKlientFX()
+        + getEmail()
+        + getId_zamowienia()
+        + getImie()
+        + getNazwisko()
+        + getNip()
+        + setEmail()
+        + setId_zamowienia()
+        + setImie()
+        + setNazwisko()
+        + setNip()
+        + toString()
+    }
+  }
+  
+
+  namespace application {
+    class application.KlientDodajZamowienie {
+        - buttonAnuluj : Button
+        - buttonPokazKoszyk : Button
+        - buttonPotwierdz : Button
+        - columnIdKlienta : TableColumn<KoszykFx, String>
+        - columnIdKoszyka : TableColumn<KoszykFx, String>
+        - columnIdOferty : TableColumn<KoszykFx, String>
+        - columnIlosc : TableColumn<KoszykFx, String>
+        - columnKoszt : TableColumn<KoszykFx, String>
+        - tableKoszyk : TableView<KoszykFx>
+        + getKoszyk()
+        + initialize()
+        ~ buttonPokazKoszykClick()
+        ~ buttonPotwierdzClick()
+        ~ buttoneAnulujClick()
+    }
+  }
+  
+
+  namespace application {
+    class application.KlientFX {
+        ~ email : String
+        ~ idklienta : String
+        ~ idosoby : String
+        ~ imie : String
+        ~ nazwisko : String
+        ~ nip : String
+        ~ telefon : String
+        + KlientFX()
+        + getEmail()
+        + getIdklienta()
+        + getIdosoby()
+        + getImie()
+        + getNazwisko()
+        + getNip()
+        + getTelefon()
+    }
+  }
+  
+
+  namespace application {
+    class application.KlientMain {
+        + ZamowienieColumn : TableColumn
+        + buttonLek : Button
+        + buttonOferty : Button
+        + buttonZamowienie : Button
+        + columnGramatura : TableColumn
+        + columnIlosc : TableColumn
+        + columnKoszt : TableColumn
+        + columnNazwa : TableColumn
+        + columnNazwaOf : TableColumn<OfertyFX, String>
+        + idlekuField : TextField
+        + idzamowieniaField : TextField
+        + klientColumn : TableColumn
+        + realizacjiaColumn : TableColumn
+        + stanColumn : TableColumn
+        + tabela : TableView
+        + tableCena : TableColumn<OfertyFX, String>
+        + tableDataR : TableColumn<ZamowieniaKlientaFx, String>
+        + tableDataZ : TableColumn<ZamowieniaKlientaFx, String>
+        + tableGramatura : TableColumn<LekFx, String>
+        + tableIdKlienta : TableColumn<ZamowieniaKlientaFx, String>
+        + tableIdKoszyka : TableColumn<ZamowieniaKlientaFx, String>
+        + tableIdLek : TableColumn<LekFx, String>
+        + tableIdLeku : TableColumn<OfertyFX, String>
+        + tableIdOferty : TableColumn<OfertyFX, String>
+        + tableIdZamowienia : TableColumn<ZamowieniaKlientaFx, String>
+        + tableLek : TableView<LekFx>
+        + tableNazwa : TableColumn<LekFx, String>
+        + tableOferty : TableView<OfertyFX>
+        + tableStan : TableColumn<ZamowieniaKlientaFx, String>
+        + tableWaga : TableColumn<ZamowieniaKlientaFx, String>
+        + tableZamowienie : TableView<ZamowieniaKlientaFx>
+        + wagaColumn : TableColumn
+        + zloenieColumn : TableColumn
+        ~ buttonDodaj : Button
+        ~ buttonLoggout : Button
+        ~ buttonZatwierdz : Button
+        ~ koszykIdOfertyField : TextField
+        ~ koszykIloscField : TextField
+        - buttonConfirmPassword : Button
+        - changePasswordField : TextField
+        + buttonZatwierdzClick()
+        + getLek()
+        + getOferty()
+        + getZamowienia()
+        + getZamowienie()
+        + initialize()
+        ~ buttonDodajClick()
+        ~ buttonLekClick()
+        ~ buttonLoggoutClick()
+        ~ buttonOfertyCllick()
+        ~ buttonZamowienieClick()
+        ~ changePasswordClick()
+    }
+  }
+  
+
+  namespace application {
+    class application.KoszykFx {
+        - idklienta : String
+        - idkoszyka : String
+        - idoferty : String
+        - ilosc : String
+        - koszt : String
+        + KoszykFx()
+        + getIdklienta()
+        + getIdkoszyka()
+        + getIdoferty()
+        + getIlosc()
+        + getKoszt()
+    }
+  }
+  
+
+  namespace application {
+    class application.LekFX1 {
+        ~ gramatura : String
+        ~ id_leku : String
+        ~ nazwa : String
+        + LekFX1()
+        + LekFX1()
+        + getGramatura()
+        + getId_leku()
+        + getNazwa()
+        + setGramatura()
+        + setId_leku()
+        + setNazwa()
+        + toString()
+    }
+  }
+  
+
+  namespace application {
+    class application.LekFx {
+        - gramatura : String
+        - idleku : String
+        - nazwa : String
+        + LekFx()
+        + getGramatura()
+        + getIdleku()
+        + getNazwa()
+    }
+  }
+  
+
+  namespace application {
+    class application.LoginController {
+        - emailField : TextField
+        - loginButton : Button
+        - passwordField : PasswordField
+        - registerHyperlink : Hyperlink
+        + initialize()
+        + recoveryHyperlinkClick()
+        ~ loginButtonClick()
+        ~ registerHyperlinkClick()
+    }
+  }
+  
+
+  namespace application {
+    class application.MagazynFX {
+        ~ data : String
+        ~ id_surowca : String
+        ~ ilosc : String
+        ~ nazwa : String
+        ~ pozycja_na_magazynie : String
+        + MagazynFX()
+        + getData()
+        + getId_surowca()
+        + getIlosc()
+        + getNazwa()
+        + getPozycja_na_magazynie()
+        + setData()
+        + setId_surowca()
+        + setIlosc()
+        + setNazwa()
+        + setPozycja_na_magazynie()
+        + toString()
+    }
+  }
+  
+
+  namespace application {
+    class application.MainApp {
+        {static} + client : ChatClient
+        {static} + uzytkownik : Uzytkownik
+        {static} + main()
+        + start()
+    }
+  }
+  
+
+  namespace application {
+    class application.OfertaFX {
+        ~ cena : String
+        ~ gramatura : String
+        ~ id_oferty : String
+        ~ nazwa : String
+        + OfertaFX()
+        + OfertaFX()
+        + getCena()
+        + getGramatura()
+        + getId_oferty()
+        + getNazwa()
+        + setCena()
+        + setGramatura()
+        + setId_oferty()
+        + setNazwa()
+        + toString()
+    }
+  }
+  
+
+  namespace application {
+    class application.OfertyFX {
+        - cena : String
+        - idleku : String
+        - idoferty : String
+        - nazwa : String
+        + OfertyFX()
+        + getCena()
+        + getIdleku()
+        + getIdoferty()
+        + getNazwa()
+    }
+  }
+  
+
+  namespace application {
+    class application.OfficeDodajLek {
+        + gramaturaField : TextField
+        + nazwaField : TextField
+        + initialize()
+        ~ DodajLekButtonClick()
+        ~ PowrotButtonClick()
+    }
+  }
+  
+
+  namespace application {
+    class application.OfficeDodajOferte {
+        + cenaField : TextField
+        + choiceBox : ComboBox<String>
+        + choiceBox1 : ChoiceBox<String>
+        + initialize()
+        ~ DodaOferteButtonClick()
+        ~ PowrotButtonClick()
+    }
+  }
+  
+
+  namespace application {
+    class application.OfficeDodajSurowiec {
+        + choiceBox : ChoiceBox<String>
+        + dataField : TextField
+        + nazwaField : TextField
+        + initialize()
+        ~ DodaSurowiecButtonClick()
+        ~ PowrotButtonClick()
+    }
+  }
+  
+
+  namespace application {
+    class application.OfficeMain {
+        + initialize()
+        ~ DodajLekButtonClick()
+        ~ DodajOferteButtonClick()
+        ~ DodajSurowiecButtonClick()
+        ~ UsunLekButtonClick()
+        ~ UsunOferteButtonClick()
+        ~ UsunSurowiecButtonClick()
+        ~ WylogujOfficeButtonClick()
+        ~ WystawFaktureButtonClick()
+        ~ WyswietlFakturyButtonClick()
+        ~ WyswietlLekiButtonClick()
+        ~ WyswietlOfertyButtonClick()
+        ~ WyswietlSurowceButtonClick()
+        ~ ZmienHasloOfficeButtonClick()
+    }
+  }
+  
+
+  namespace application {
+    class application.OfficeUsun {
+        + gramaturaBox : ChoiceBox<String>
+        + nazwaBox : ComboBox<String>
+        + ofertaBox : ChoiceBox<String>
+        + surowiecBox : ChoiceBox<String>
+        + initialize()
+        ~ PowrotButtonClick()
+        ~ UsunLekButtonClick()
+        ~ UsunOferteButtonClick()
+        ~ UsunSurowiecButtonClick()
+    }
+  }
+  
+
+  namespace application {
+    class application.OfficeWystawFakture {
+        + choiceBox : ComboBox<String>
+        + choiceBox1 : ChoiceBox<String>
+        + numerField : TextField
+        + initialize()
+        ~ PowrotButtonClick()
+        ~ WystawFaktureButtonClick()
+    }
+  }
+  
+
+  namespace application {
+    class application.OfficeWyswietlFaktury {
+        + emailColumn : TableColumn
+        + idfakturyColumn : TableColumn
+        + idzamowieniaColumn : TableColumn
+        + imieColumn : TableColumn
+        + nazwiskoColumn : TableColumn
+        + nipColumn : TableColumn
+        + nrfakturyColumn : TableColumn
+        + refresh1 : Button
+        + tabela : TableView
+        + wroc : Button
+        + getZamowienia()
+        + initialize()
+        + refresh()
+        + wroc()
+    }
+  }
+  
+
+  namespace application {
+    class application.OfficeWyswietlLeki {
+        + gramaturaColumn : TableColumn
+        + idlekuColumn : TableColumn
+        + nazwaColumn : TableColumn
+        + refresh1 : Button
+        + tabela : TableView
+        + wroc : Button
+        + getZamowienia()
+        + initialize()
+        + refresh()
+        + wroc()
+    }
+  }
+  
+
+  namespace application {
+    class application.OfficeWyswietlOferte {
+        + cenaColumn : TableColumn
+        + gramaturaColumn : TableColumn
+        + idofertyColumn : TableColumn
+        + nazwaColumn : TableColumn
+        + refresh1 : Button
+        + tabela : TableView
+        + wroc : Button
+        + getZamowienia()
+        + initialize()
+        + refresh()
+        + wroc()
+    }
+  }
+  
+
+  namespace application {
+    class application.OfficeWyswietlSurowce {
+        + dataColumn : TableColumn
+        + dostawcaColumn : TableColumn
+        + idsurowcaColumn : TableColumn
+        + nazwaColumn : TableColumn
+        + pozycjanamagazynieColumn : TableColumn
+        + refresh1 : Button
+        + tabela : TableView
+        + wroc : Button
+        + getZamowienia()
+        + initialize()
+        + refresh()
+        + wroc()
+    }
+  }
+  
+
+  namespace application {
+    class application.OfficeZmianaHasla {
+        + confpassTextField : TextField
+        + passTextField : TextField
+        + wrocButton : Button
+        + zmienhasloButton : Button
+        + initialize()
+        + wrocButtonClick()
+        + zmienhasloButtonClick()
+    }
+  }
+  
+
+  namespace application {
+    class application.OsobaFX {
+        - e_mail : String
+        - haslo : String
+        - id_osoby : String
+        - imie : String
+        - nazwisko : String
+        - nr_tel : String
+        - pesel : String
+        - status_konta : String
+        + OsobaFX()
+        + getE_mail()
+        + getHaslo()
+        + getId_osoby()
+        + getImie()
+        + getNazwisko()
+        + getNr_tel()
+        + getPesel()
+        + getStatus_konta()
+        + setE_mail()
+        + setHaslo()
+        + setId_osoby()
+        + setImie()
+        + setNazwisko()
+        + setNr_tel()
+        + setPesel()
+        + setStatus_konta()
+    }
+  }
+  
+
+  namespace application {
+    class application.PracownikFX {
+        - idosoby : String
+        - idpracownika : String
+        - imie : String
+        - nazwisko : String
+        - stanowisko : String
+        - wynagrodzenie : String
+        + PracownikFX()
+        + getIdosoby()
+        + getIdpracownika()
+        + getImie()
+        + getNazwisko()
+        + getStanowisko()
+        + getWynagrodzenie()
+        + setIdosoby()
+        + setIdpracownika()
+        + setStanowisko()
+        + setWynagrodzenie()
+    }
+  }
+  
+
+  namespace application {
+    class application.ProdukcjaMain {
+        + edycjaZamowienField : Button
+        + wylogujField : Button
+        + wyswietlKontaField : Button
+        + wyswietlZamowieniaField : Button
+        + zmienHasloField : Button
+        + EdycjaZamowieniaButtonClick()
+        + WylogujButtonClick()
+        + WyswietlZamowieniaButtonClick()
+        + ZmianaHaslaButtonClick()
+        + initialize()
+    }
+  }
+  
+
+  namespace application {
+    class application.ProdukcjaWyswietlZamowienia {
+        + ZamowienieColumn : TableColumn
+        + klientColumn : TableColumn
+        + koszykColumn : TableColumn
+        + realizacjiaColumn : TableColumn
+        + refresh1 : Button
+        + stanColumn : TableColumn
+        + tabela : TableView
+        + wagaColumn : TableColumn
+        + wroc : Button
+        + zloenieColumn : TableColumn
+        + getZamowienia()
+        + initialize()
+        + refresh()
+        + wroc()
+    }
+  }
+  
+
+  namespace application {
+    class application.ProdukcjaZmianaHasla {
+        + confpassTextField : TextField
+        + passTextField : TextField
+        + wrocButton : Button
+        + zmienhasloButton : Button
+        + initialize()
+        + wrocButtonClick()
+        + zmienhasloButtonClick()
+    }
+  }
+  
+
+  namespace application {
+    class application.ProdukcjaZmianaZamowienia {
+        + IdZamowieniaTextField : TextField
+        + dataTextField : TextField
+        + wrocButton : Button
+        + zmienStatusZamowieniaButtonClick : Button
+        + initialize()
+        + wrocButtonClick()
+        + zmienStatusZamowieniaButtonClick()
+    }
+  }
+  
+
+  namespace application {
+    class application.RecoverPasswordController {
+        - backButton : Button
+        - emailField : TextField
+        - lastnameField : TextField
+        - nameField : TextField
+        - recoverPasswordButton : Button
+        - recoverPasswordLabel : Label
+        + initialize()
+        ~ backButtonClick()
+        ~ recoverPasswordButtonClick()
+    }
+  }
+  
+
+  namespace application {
+    class application.RegisterController {
+        + NipField : TextField
+        + NipLabel : Label
+        + NrTelField : TextField
+        + PeselField : TextField
+        + PeselLabel : Label
+        + telLabel : Label
+        - backButton : Button
+        - choiceHouse : ComboBox<String>
+        - confirmPasswordField : PasswordField
+        - confirmPasswordLabel : Label
+        - descriptionOfHouse : TextArea
+        - emailField : TextField
+        - emailLabel : Label
+        - firstNameField : TextField
+        - imageOfHouse : ImageView
+        - lastNameField : TextField
+        - lastNameLabel : Label
+        - nameLabel : Label
+        - passwordField : PasswordField
+        - passwordLabel : Label
+        - registerButton : Button
+        - registerMainPane : Pane
+        - registerPane : Pane
+        + initialize()
+        ~ backButtonClick()
+        ~ registerButtonClick()
+    }
+  }
+  
+
+  namespace application {
+    class application.ScreenController {
+        - button : Button
+        - hyperlink : Hyperlink
+        + ScreenController()
+        + ScreenController()
+        + switchScene()
+    }
+  }
+  
+
+  namespace application {
+    class application.StoreAktualizuj {
+        + choiceBox : ChoiceBox<String>
+        + iloscField : TextField
+        + pozycjaField : TextField
+        + initialize()
+        ~ AktualizujButtonClick()
+        ~ PowrotButtonClick()
+    }
+  }
+  
+
+  namespace application {
+    class application.StoreDodajSurowiec {
+        + choiceBox : ChoiceBox<String>
+        + dataField : TextField
+        + nazwaField : TextField
+        + initialize()
+        ~ DodaSurowiecButtonClick()
+        ~ PowrotButtonClick()
+    }
+  }
+  
+
+  namespace application {
+    class application.StoreMain {
+        + wyswietlanie : Label
+        + initialize()
+        ~ AktualizujsurowiecButtonClick()
+        ~ DodajDostaweButtonClick()
+        ~ DodajSurowiecButtonClick()
+        ~ WylogujOfficeButtonClick()
+        ~ WyswietlDostawyButtonClick()
+        ~ WyswietlMagazynButtonClick()
+        ~ WyswietlSurowceButtonClick()
+        ~ ZmienHasloOfficeButtonClick()
+    }
+  }
+  
+
+  namespace application {
+    class application.StoreNowaDostawa {
+        + choiceBox : ChoiceBox<String>
+        + choiceBox1 : ChoiceBox<String>
+        + dataField : TextField
+        + iloscField : TextField
+        + nrseriiField : TextField
+        + pozycjaField : TextField
+        + initialize()
+        ~ DodajDostaweButtonClick()
+        ~ PowrotButtonClick()
+    }
+  }
+  
+
+  namespace application {
+    class application.StoreWyswietlDostawy {
+        + dataColumn : TableColumn
+        + iddostawcyColumnn : TableColumn
+        + iddostawyColumn : TableColumn
+        + idsurowcaColumn : TableColumn
+        + iloscColumn : TableColumn
+        + nazwadostawcyColumnn : TableColumn
+        + nazwasurowcaColumn : TableColumn
+        + nrseriiColumnn : TableColumn
+        + refresh1 : Button
+        + tabela : TableView
+        + wroc : Button
+        + getZamowienia()
+        + initialize()
+        + refresh()
+        + wroc()
+    }
+  }
+  
+
+  namespace application {
+    class application.StoreWyswietlMagazyn {
+        + dataColumn : TableColumn
+        + idsurowcaColumn : TableColumn
+        + iloscColumn : TableColumn
+        + nazwaColumn : TableColumn
+        + pozycjaColumn : TableColumn
+        + refresh1 : Button
+        + tabela : TableView
+        + wroc : Button
+        + getZamowienia()
+        + initialize()
+        + refresh()
+        + wroc()
+    }
+  }
+  
+
+  namespace application {
+    class application.StoreWyswietlSurowce {
+        + dataColumn : TableColumn
+        + dostawcaColumn : TableColumn
+        + idsurowcaColumn : TableColumn
+        + nazwaColumn : TableColumn
+        + pozycjanamagazynieColumn : TableColumn
+        + refresh1 : Button
+        + tabela : TableView
+        + wroc : Button
+        + getZamowienia()
+        + initialize()
+        + refresh()
+        + wroc()
+    }
+  }
+  
+
+  namespace application {
+    class application.StoreZmianaHasla {
+        + confpassTextField : TextField
+        + passTextField : TextField
+        + wrocButton : Button
+        + zmienhasloButton : Button
+        + initialize()
+        + wrocButtonClick()
+        + zmienhasloButtonClick()
+    }
+  }
+  
+
+  namespace application {
+    class application.SurowiecFX {
+        ~ data_przydatnosci : String
+        ~ dostawca : String
+        ~ id_surowca : String
+        ~ nazwa : String
+        ~ pozycja_na_magazynie : String
+        + SurowiecFX()
+        + SurowiecFX()
+        + getData_przydatnosci()
+        + getDostawca()
+        + getId_surowca()
+        + getNazwa()
+        + getPozycja_na_magazynie()
+        + setData_przydatnosci()
+        + setDostawca()
+        + setId_surowca()
+        + setNazwa()
+        + setPozycja_na_magazynie()
+        + toString()
+    }
+  }
+  
+
+  namespace application {
+    class application.SzczegolyZamowieniaFX {
+        - datar : String
+        - dataz : String
+        - gramatura : String
+        - idklienta : String
+        - idzamowienia : String
+        - ilosc : String
+        - koszt : String
+        - nazwa : String
+        - stan : String
+        - waga : String
+        + SzczegolyZamowieniaFX()
+        + getDatar()
+        + getDataz()
+        + getGramatura()
+        + getIdklienta()
+        + getIdzamowienia()
+        + getIlosc()
+        + getKoszt()
+        + getNazwa()
+        + getStan()
+        + getWaga()
+    }
+  }
+  
+
+  namespace application {
+    class application.ZamowieniaKlientaFx {
+        - datar : String
+        - dataz : String
+        - idklienta : String
+        - idkoszyka : String
+        - idzamowienia : String
+        - stan : String
+        - waga : String
+        + ZamowieniaKlientaFx()
+        + getDatar()
+        + getDataz()
+        + getIdklienta()
+        + getIdkoszyka()
+        + getIdzamowienia()
+        + getStan()
+        + getWaga()
+    }
+  }
+  
+
+  namespace application {
+    class application.ZamowienieFX {
+        - data_realizacji : String
+        - data_zlozenia : String
+        - id_klienta : String
+        - id_koszyka : String
+        - id_zamowienia : String
+        - stan : String
+        - waga : String
+        + ZamowienieFX()
+        + getData_realizacji()
+        + getData_zlozenia()
+        + getId_klienta()
+        + getId_koszyka()
+        + getId_zamowienia()
+        + getStan()
+        + getWaga()
+        + setData_realizacji()
+        + setData_zlozenia()
+        + setId_klienta()
+        + setId_koszyka()
+        + setId_zamowienia()
+        + setStan()
+        + setWaga()
+    }
+  }
+  
+
+  application.AdminAnulujZamowienia .up.|> javafx.fxml.Initializable
+  application.AdminDodajDostawce .up.|> javafx.fxml.Initializable
+  application.AdminDodajPracownika .up.|> javafx.fxml.Initializable
+  application.AdminMain .up.|> javafx.fxml.Initializable
+  application.AdminSzczegolyZamowienia .up.|> javafx.fxml.Initializable
+  application.AdminUsunDostawce .up.|> javafx.fxml.Initializable
+  application.AdminUsunPracownika .up.|> javafx.fxml.Initializable
+  application.AdminWyswietlDostawce .up.|> javafx.fxml.Initializable
+  application.AdminWyswietlKlientow .up.|> javafx.fxml.Initializable
+  application.AdminWyswietlKonta .up.|> javafx.fxml.Initializable
+  application.AdminWyswietlPracownikow .up.|> javafx.fxml.Initializable
+  application.AdminWyswietlZamowienia .up.|> javafx.fxml.Initializable
+  application.AdminZablokujOdblokuj .up.|> javafx.fxml.Initializable
+  application.AdminZmianaHasla .up.|> javafx.fxml.Initializable
+  application.AdminZmianaZamowienia .up.|> javafx.fxml.Initializable
+  application.AdminZmienWyplate .up.|> javafx.fxml.Initializable
+  application.FakturaKlientFX -up-|> application.FakturaFX
+  application.KlientDodajZamowienie .up.|> javafx.fxml.Initializable
+  application.KlientMain .up.|> javafx.fxml.Initializable
+  application.LoginController .up.|> javafx.fxml.Initializable
+  application.MainApp -up-|> javafx.application.Application
+  application.OfficeDodajLek .up.|> javafx.fxml.Initializable
+  application.OfficeDodajOferte .up.|> javafx.fxml.Initializable
+  application.OfficeDodajSurowiec .up.|> javafx.fxml.Initializable
+  application.OfficeMain .up.|> javafx.fxml.Initializable
+  application.OfficeUsun .up.|> javafx.fxml.Initializable
+  application.OfficeWystawFakture .up.|> javafx.fxml.Initializable
+  application.OfficeWyswietlFaktury .up.|> javafx.fxml.Initializable
+  application.OfficeWyswietlLeki .up.|> javafx.fxml.Initializable
+  application.OfficeWyswietlOferte .up.|> javafx.fxml.Initializable
+  application.OfficeWyswietlSurowce .up.|> javafx.fxml.Initializable
+  application.OfficeZmianaHasla .up.|> javafx.fxml.Initializable
+  application.ProdukcjaMain .up.|> javafx.fxml.Initializable
+  application.ProdukcjaWyswietlZamowienia .up.|> javafx.fxml.Initializable
+  application.ProdukcjaZmianaHasla .up.|> javafx.fxml.Initializable
+  application.ProdukcjaZmianaZamowienia .up.|> javafx.fxml.Initializable
+  application.RecoverPasswordController .up.|> javafx.fxml.Initializable
+  application.RegisterController .up.|> javafx.fxml.Initializable
+  application.StoreAktualizuj .up.|> javafx.fxml.Initializable
+  application.StoreDodajSurowiec .up.|> javafx.fxml.Initializable
+  application.StoreMain .up.|> javafx.fxml.Initializable
+  application.StoreNowaDostawa .up.|> javafx.fxml.Initializable
+  application.StoreWyswietlDostawy .up.|> javafx.fxml.Initializable
+  application.StoreWyswietlMagazyn .up.|> javafx.fxml.Initializable
+  application.StoreWyswietlSurowce .up.|> javafx.fxml.Initializable
+  application.StoreZmianaHasla .up.|> javafx.fxml.Initializable
+
+
+right footer
+
+
+PlantUML diagram generated by SketchIt! (https://bitbucket.org/pmesmeur/sketch.it)
+For more information about this tool, please contact philippe.mesmeur@gmail.com
+endfooter
+
+@enduml

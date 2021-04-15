@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane fx:id="admin" prefHeight="800.0" prefWidth="800.0" stylesheets="@application.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.AdminWyswietlPracownikow">
+    <children>
+        <TableView fx:id="tabela" layoutX="12.0" layoutY="10.0" prefHeight="745.0" prefWidth="773.0">
+            <columns>
+                <TableColumn fx:id="pracownikColumn" prefWidth="96.0" text="Id Pracownika" />
+                <TableColumn fx:id="osobaColumn" prefWidth="94.0" text="Id osoby" />
+                <TableColumn fx:id="imieColumn" prefWidth="105.0" text="Imie" />
+                <TableColumn fx:id="nazwiskoColumn" prefWidth="148.0" text="Nazwiswko" />
+                <TableColumn fx:id="pieniazkiColumn" prefWidth="144.0" text="Wynagrodzenie" />
+                <TableColumn fx:id="stanowiskoColumn" prefWidth="184.0" text="Stanowisko" />
+            </columns>
+        </TableView>
+        <Button fx:id="wroc" layoutX="14.0" layoutY="757.0" mnemonicParsing="false" onAction="#wroc" prefHeight="29.0" prefWidth="74.0" text="Wroc" />
+        <Button fx:id="refresh1" layoutX="712.0" layoutY="757.0" mnemonicParsing="false" onAction="#refresh" prefHeight="29.0" prefWidth="74.0" text="Odswiez" />
+    </children>
+</AnchorPane>

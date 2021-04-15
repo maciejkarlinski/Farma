@@ -1,0 +1,283 @@
+@startuml
+
+title __KLASY's Class Diagram__\n
+
+  namespace klasy {
+    class klasy.Dostawa {
+        ~ data_dostawy : String
+        ~ id_dostawcy : int
+        ~ id_dostawy : int
+        ~ id_surowca : int
+        ~ ilosc : int
+        ~ nr_serii : int
+        + Dostawa()
+        + Dostawa()
+        + getData_dostawy()
+        + getId_dostawcy()
+        + getId_dostawy()
+        + getId_surowca()
+        + getIlosc()
+        + getNr_serii()
+        + setData_dostawy()
+        + setId_dostawcy()
+        + setId_dostawy()
+        + setId_surowca()
+        + setIlosc()
+        + setNr_serii()
+        + toString()
+    }
+  }
+  
+
+  namespace klasy {
+    class klasy.Dostawca {
+        ~ adres : String
+        ~ id_dostawcy : int
+        ~ kraj : String
+        ~ nazwa : String
+        ~ nip : int
+        + Dostawca()
+        + Dostawca()
+        + getAdres()
+        + getId_dostawcy()
+        + getKraj()
+        + getNazwa()
+        + getNip()
+        + setAdres()
+        + setId_dostawcy()
+        + setKraj()
+        + setNazwa()
+        + setNip()
+        + toString()
+    }
+  }
+  
+
+  namespace klasy {
+    class klasy.FakturaFirma {
+        ~ id_dostawy : int
+        + FakturaFirma()
+        + FakturaFirma()
+        + getId_dostawy()
+        + setId_dostawy()
+        + toString()
+    }
+  }
+  
+
+  namespace klasy {
+    class klasy.FakturaKlient {
+        ~ id_klienta : int
+        ~ id_zamowienia : int
+        + FakturaKlient()
+        + FakturaKlient()
+        + getId_klienta()
+        + getId_zamowienia()
+        + setId_klienta()
+        + setId_zamowienia()
+        + toString()
+    }
+  }
+  
+
+  namespace klasy {
+    class klasy.Firma {
+        ~ adres : String
+        ~ data_zalozenia : String
+        ~ kod_pocztowy : String
+        ~ miasto : String
+        ~ nazwa : String
+        ~ nip : int
+        ~ regon : int
+        + Firma()
+        + Firma()
+        + getAdres()
+        + getData_zalozenia()
+        + getKod_pocztowy()
+        + getMiasto()
+        + getNazwa()
+        + getNip()
+        + getRegon()
+        + setAdres()
+        + setData()
+        + setKod_pocztowy()
+        + setMiasto()
+        + setNazwa()
+        + setNip()
+        + setRegon()
+        + toString()
+    }
+  }
+  
+
+  namespace klasy {
+    class klasy.Klient {
+        ~ nip : int
+        + Klient()
+        + toString()
+    }
+  }
+  
+
+  namespace klasy {
+    class klasy.Koszyk {
+        ~ id_klienta : int
+        ~ id_koszyka : int
+        ~ id_oferty : int
+        ~ ilosc : int
+        ~ koszt : double
+        + Koszyk()
+        + Koszyk()
+        + getId_klienta()
+        + getId_koszyka()
+        + getId_oferty()
+        + getIlosc()
+        + getKoszt()
+        + setId_klienta()
+        + setId_koszyka()
+        + setId_oferty()
+        + setIlosc()
+        + setKoszt()
+        + toString()
+    }
+  }
+  
+
+  namespace klasy {
+    class klasy.Lek {
+        ~ gramatura : int
+        ~ id_leku : int
+        ~ nazwa : String
+        + Lek()
+        + Lek()
+        + getGramatura()
+        + getId_leku()
+        + getNazwa()
+        + setGramatura()
+        + setId_leku()
+        + setNazwa()
+        + toString()
+    }
+  }
+  
+
+  namespace klasy {
+    class klasy.Magazyn {
+        ~ id_surowca : int
+        ~ ilosc : int
+        ~ pozycja_na_magazynie : int
+        + Magazyn()
+        + Magazyn()
+        + getId_surowca()
+        + getIlosc()
+        + getPozycja_na_magazynie()
+        + setId_surowca()
+        + setIlosc()
+        + setPozycja_na_magazynie()
+        + toString()
+    }
+  }
+  
+
+  namespace klasy {
+    class klasy.Oferta {
+        ~ cena : double
+        ~ id_leku : int
+        ~ id_oferty : int
+        + Oferta()
+        + Oferta()
+        + getCena()
+        + getId_leku()
+        + getId_oferty()
+        + setCena()
+        + setId_leku()
+        + setId_oferty()
+        + toString()
+    }
+  }
+  
+
+  namespace klasy {
+    class klasy.Pracownik {
+        ~ idosoby : int
+        ~ stanowisko : String
+        ~ wynagrodzenie : int
+        + Pracownik()
+        + Pracownik()
+        + getStanowisko()
+        + getWynagrodzenie()
+        + setStanowisko()
+        + setWynagrodzenie()
+        + toString()
+    }
+  }
+  
+
+  namespace klasy {
+    class klasy.Surowiec {
+        ~ data_przydatnosci : String
+        ~ id_dostawcy : int
+        ~ id_surowca : int
+        ~ nazwa : String
+        ~ pozycja_na_magazynie : int
+        + Surowiec()
+        + Surowiec()
+        + getData_przydatnosci()
+        + getId_dostawcy()
+        + getId_surowca()
+        + getNazwa()
+        + getPozycja_na_magazynie()
+        + setData_przydatnosci()
+        + setId_dostawcy()
+        + setId_surowca()
+        + setNazwa()
+        + setPozycja_na_magazynie()
+        + toString()
+    }
+  }
+  
+
+  namespace klasy {
+    class klasy.Zamowienie {
+        ~ data_realizacji : String
+        ~ data_zlozenia : String
+        ~ id_klienta : int
+        ~ id_koszyka : int
+        ~ id_zamowienia : int
+        ~ stan : int
+        ~ waga : double
+        + Zamowienie()
+        + Zamowienie()
+        + getData_realizacji()
+        + getData_zlozenia()
+        + getId_klienta()
+        + getId_koszyka()
+        + getId_zamowienia()
+        + getStan()
+        + getWaga()
+        + setData_realizacji()
+        + setData_zlozenia()
+        + setId_klienta()
+        + setId_koszyka()
+        + setId_zamowienia()
+        + setStan()
+        + setWaga()
+        + toString()
+    }
+  }
+  
+
+  klasy.FakturaFirma -up-|> klasy_glowne.Faktura
+  klasy.FakturaKlient -up-|> klasy_glowne.Faktura
+  klasy.Klient -up-|> klasy_glowne.Osoba
+  klasy.Pracownik -up-|> klasy_glowne.Osoba
+
+
+right footer
+
+
+PlantUML diagram generated by SketchIt! (https://bitbucket.org/pmesmeur/sketch.it)
+For more information about this tool, please contact philippe.mesmeur@gmail.com
+endfooter
+
+@enduml

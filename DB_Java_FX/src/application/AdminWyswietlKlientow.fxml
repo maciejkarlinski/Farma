@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane fx:id="admin" prefHeight="800.0" prefWidth="800.0" style="-fx-background-image: \@admin;" stylesheets="@application.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.AdminWyswietlKlientow">
+    <children>
+        <TableView fx:id="tabela" layoutX="11.0" layoutY="14.0" prefHeight="743.0" prefWidth="777.0">
+            <columns>
+                <TableColumn fx:id="idColumn" prefWidth="58.0" text="Id" />
+                <TableColumn fx:id="idosobyColumn" prefWidth="102.0" text="Id osoby" />
+                <TableColumn fx:id="imieColumn" prefWidth="95.0" text="Imie" />
+                <TableColumn fx:id="nazwiskoColumn" prefWidth="123.0" text="Nazwisko" />
+                <TableColumn fx:id="mailColumn" prefWidth="108.0" text="E-mail" />
+                <TableColumn fx:id="telefonColumn" prefWidth="144.0" text="Telefon" />
+                <TableColumn fx:id="nipColumn" prefWidth="146.0" text="Nip" />
+            </columns>
+        </TableView>
+        <Button fx:id="wroc" layoutX="14.0" layoutY="757.0" mnemonicParsing="false" onAction="#wroc" prefHeight="29.0" prefWidth="74.0" text="Wroc" />
+        <Button fx:id="refresh1" layoutX="712.0" layoutY="757.0" mnemonicParsing="false" onAction="#refresh" prefHeight="29.0" prefWidth="74.0" text="Odswiez" />
+    </children>
+</AnchorPane>

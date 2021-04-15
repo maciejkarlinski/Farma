@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="klient" prefHeight="800.0" prefWidth="800.0" stylesheets="@application.css" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.KlientDodajZamowienie">
+   <children>
+      <TableView fx:id="tableKoszyk" layoutX="25.0" layoutY="69.0" prefHeight="182.0" prefWidth="378.0">
+        <columns>
+          <TableColumn fx:id="columnIdKoszyka" prefWidth="75.0" text="id_koszyka" />
+          <TableColumn fx:id="columnIdOferty" prefWidth="75.0" text="id_oferty" />
+            <TableColumn fx:id="columnIdKlienta" prefWidth="75.0" text="id_klienta" />
+            <TableColumn fx:id="columnIlosc" prefWidth="75.0" text="ilosc" />
+            <TableColumn fx:id="columnKoszt" prefWidth="75.0" text="koszt" />
+        </columns>
+      </TableView>
+      <Button fx:id="buttonPotwierdz" layoutX="86.0" layoutY="315.0" mnemonicParsing="false" onAction="#buttonPotwierdzClick" prefHeight="36.0" prefWidth="103.0" text="Potwierdź">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
+      <Button fx:id="buttonAnuluj" layoutX="395.0" layoutY="322.0" mnemonicParsing="false" onAction="#buttoneAnulujClick" prefHeight="36.0" prefWidth="80.0" text="Anuluj">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
+      <Label layoutX="146.0" layoutY="29.0" text="Potwietdź/Anuluj zamówienie">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Label>
+      <Button fx:id="buttonPokazKoszyk" layoutX="468.0" layoutY="123.0" mnemonicParsing="false" onAction="#buttonPokazKoszykClick" text="Pokaż koszyka" />
+   </children>
+</AnchorPane>

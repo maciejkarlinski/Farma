@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="magazyn" prefHeight="800.0" prefWidth="800.0" stylesheets="@application.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.StoreAktualizuj">
+    <children>
+        <Label fx:id="wyswietlanie" alignment="CENTER" layoutX="140.0" layoutY="280.0" prefHeight="46.0" prefWidth="220.0" text="Id surowca" textFill="WHITE" wrapText="true">
+            <font>
+                <Font name="System Bold" size="20.0" />
+            </font>
+        </Label>
+        <Button fx:id="dodajDostaweField" layoutX="320.0" layoutY="532.0" mnemonicParsing="false" onAction="#AktualizujButtonClick" prefHeight="63.0" prefWidth="161.0" text="Aktualizuj">
+            <font>
+                <Font size="22.0" />
+            </font>
+        </Button>
+        <Button fx:id="powrotField" layoutX="14.0" layoutY="751.0" mnemonicParsing="false" onAction="#PowrotButtonClick" prefHeight="35.0" prefWidth="81.0" text="Powrót">
+            <font>
+                <Font name="System Bold" size="12.0" />
+            </font>
+        </Button>
+        <TextField fx:id="iloscField" layoutX="375.0" layoutY="351.0" prefHeight="46.0" prefWidth="229.0" promptText="1">
+            <font>
+                <Font size="25.0" />
+            </font>
+        </TextField>
+        <Label fx:id="wyswietlanie1" alignment="CENTER" layoutX="140.0" layoutY="355.0" prefHeight="46.0" prefWidth="220.0" text="Ilość" textFill="WHITE" wrapText="true">
+            <font>
+                <Font name="System Bold" size="20.0" />
+            </font>
+        </Label>
+        <TextField fx:id="pozycjaField" layoutX="375.0" layoutY="426.0" prefHeight="46.0" prefWidth="229.0" promptText="1">
+            <font>
+                <Font size="25.0" />
+            </font>
+        </TextField>
+        <Label fx:id="wyswietlanie11" alignment="CENTER" layoutX="146.0" layoutY="430.0" prefHeight="46.0" prefWidth="220.0" text="Pozycja na magazynie" textFill="WHITE" wrapText="true">
+            <font>
+                <Font name="System Bold" size="20.0" />
+            </font>
+        </Label>
+        <ChoiceBox fx:id="choiceBox" layoutX="375.0" layoutY="276.0" prefHeight="54.0" prefWidth="229.0" />
+
+    </children>
+</AnchorPane>

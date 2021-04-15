@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/DB_Version_21.01.2021 18.23 + maciek.iml" filepath="$PROJECT_DIR$/.idea/DB_Version_21.01.2021 18.23 + maciek.iml" />
+      <module fileurl="file://$PROJECT_DIR$/DB_Java_FX/Projekt_Bazy_Danych_MYSQL.iml" filepath="$PROJECT_DIR$/DB_Java_FX/Projekt_Bazy_Danych_MYSQL.iml" />
+      <module fileurl="file://$PROJECT_DIR$/DB_Server/Projekt_Bazy_Danych_MYSQL (1).iml" filepath="$PROJECT_DIR$/DB_Server/Projekt_Bazy_Danych_MYSQL (1).iml" />
+    </modules>
+  </component>
+</project>

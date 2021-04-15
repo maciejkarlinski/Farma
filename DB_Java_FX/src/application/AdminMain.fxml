@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane fx:id="admin" prefHeight="800.0" prefWidth="800.0" stylesheets="@application.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.AdminMain">
+   <children>
+      <Accordion layoutX="222.0" layoutY="247.0" prefHeight="307.0" prefWidth="357.0">
+        <panes>
+            <TitledPane animated="false" prefHeight="129.0" prefWidth="202.0" text="Zarządzaj kontami">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <GridPane layoutX="23.0" layoutY="14.0" prefHeight="139.0" prefWidth="310.0">
+                          <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                          </columnConstraints>
+                          <rowConstraints>
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                           <children>
+                              <Button fx:id="wyswietlKontaField" mnemonicParsing="false" onAction="#WyswietlKontaButtonClick" prefHeight="31.0" prefWidth="311.0" text="Wyswietl liste kont" />
+                              <Button fx:id="zablokujKontoField" mnemonicParsing="false" onAction="#ZablokujKontaButtonClick" prefHeight="31.0" prefWidth="314.0" text="Zablokuj konto" GridPane.rowIndex="2" />
+                              <Button fx:id="odblokujKontoField" mnemonicParsing="false" onAction="#OdblokujKontaButtonClick" prefHeight="31.0" prefWidth="313.0" text="Odblokuj konto" GridPane.rowIndex="3" />
+                              <Button fx:id="wyswietlKlientowButton" mnemonicParsing="false" onAction="#wyswietlKlientowButtonClick" prefHeight="25.0" prefWidth="312.0" text="Wyświetl klientow" GridPane.rowIndex="1" />
+                           </children>
+                        </GridPane>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </TitledPane>
+          <TitledPane animated="false" prefHeight="129.0" prefWidth="202.0" text="Zarządzaj pracownikami">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="131.0" prefWidth="200.0">
+                     <children>
+                        <GridPane layoutX="24.0" layoutY="8.0" prefHeight="152.0" prefWidth="309.0">
+                          <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                          </columnConstraints>
+                          <rowConstraints>
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                           <children>
+                              <Button fx:id="dodajPracownikaField" mnemonicParsing="false" onAction="#DodajPracownikaButtonClick" prefHeight="32.0" prefWidth="308.0" text="Dodaj nowego pracownika" GridPane.rowIndex="1" />
+                              <Button fx:id="zmianaWyplatyField" mnemonicParsing="false" onAction="#ZmianaWyplatyPracownikaButtonClick" prefHeight="35.0" prefWidth="308.0" text="Zmiana wyplaty pracownika" GridPane.rowIndex="2" />
+                              <Button fx:id="usunPracownikaField" mnemonicParsing="false" onAction="#UsunPracownikaClick" prefHeight="31.0" prefWidth="309.0" text="Usun pracownika" GridPane.rowIndex="3" />
+                              <Button fx:id="wyswietlPracownikowField" mnemonicParsing="false" onAction="#WyswietlPracownikaButtonClick" prefHeight="32.0" prefWidth="310.0" text="Wyswietl liste pracownikow" />
+                           </children>
+                        </GridPane>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </TitledPane>
+            <TitledPane animated="false" prefHeight="178.0" prefWidth="332.0" text="Zarządzaj dostawcami">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="234.0" prefWidth="200.0">
+                     <children>
+                        <GridPane layoutX="23.0" layoutY="7.0" prefHeight="148.0" prefWidth="313.0">
+                           <columnConstraints>
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                           </columnConstraints>
+                           <rowConstraints>
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                           </rowConstraints>
+                           <children>
+                              <Button fx:id="usunDostawceField" mnemonicParsing="false" onAction="#UsunDostawceButtonClick" prefHeight="31.0" prefWidth="316.0" text="Usun dostawce" GridPane.rowIndex="1" />
+                              <Button fx:id="wyswietlDostawcowField" mnemonicParsing="false" onAction="#WyswietlDostawceButtonClick" prefHeight="32.0" prefWidth="315.0" text="Wyswietl dostawcow" GridPane.rowIndex="2" />
+                              <Button fx:id="dodajDostawceField" mnemonicParsing="false" onAction="#DodajDostawceClick" prefHeight="29.0" prefWidth="314.0" text="Dodaj nowego dostawce" />
+                           </children>
+                        </GridPane>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </TitledPane>
+            <TitledPane animated="false" prefHeight="129.0" prefWidth="202.0" text="Zarządzaj zamowieniami">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <GridPane layoutX="23.0" layoutY="14.0" prefHeight="130.0" prefWidth="310.0">
+                           <columnConstraints>
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                           </columnConstraints>
+                           <rowConstraints>
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                           </rowConstraints>
+                           <children>
+                              <Button fx:id="wyswietlZamowieniaField" mnemonicParsing="false" onAction="#WyswietlZamowieniaButtonClick" prefHeight="30.0" prefWidth="312.0" text="Wyswietl zamowienia" />
+                              <Button fx:id="szczegolyZamowienia" mnemonicParsing="false" onAction="#szczegolyZamowieniaClick" prefHeight="25.0" prefWidth="309.0" text="Wyświetl szczegóły zamówienia" GridPane.rowIndex="1" />
+                              <Button fx:id="anulujZamowieniaField" mnemonicParsing="false" onAction="#AnulujZamowieniaButtonClick" prefHeight="31.0" prefWidth="311.0" text="Anuluj zamowienia" GridPane.rowIndex="2" />
+                              <Button fx:id="edycjaZamowienField" mnemonicParsing="false" onAction="#EdycjaZamowieniaButtonClick" prefHeight="30.0" prefWidth="313.0" text="Edycja zamowien" GridPane.rowIndex="3" />
+                           </children>
+                        </GridPane>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </TitledPane>
+            <TitledPane animated="false" prefHeight="129.0" prefWidth="202.0" text="Ustawienia konta">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="234.0" prefWidth="200.0">
+                     <children>
+                        <GridPane layoutX="23.0" layoutY="14.0" prefHeight="125.0" prefWidth="308.0">
+                           <columnConstraints>
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                           </columnConstraints>
+                           <rowConstraints>
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                           </rowConstraints>
+                           <children>
+                              <Button fx:id="zmienHasloField" mnemonicParsing="false" onAction="#ZmianaHaslaButtonClick" prefHeight="35.0" prefWidth="308.0" text="Zmien haslo" />
+                           </children>
+                        </GridPane>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </TitledPane>
+        </panes>
+      </Accordion>
+      <Button fx:id="wylogujField" layoutX="14.0" layoutY="744.0" mnemonicParsing="false" onAction="#WylogujButtonClick" prefHeight="36.0" prefWidth="85.0" text="Wyloguj" />
+      </children>
+</AnchorPane>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane fx:id="biuro" prefHeight="800.0" prefWidth="800.0" stylesheets="@application.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.OfficeWyswietlOferte">
+    <children>
+        <TableView fx:id="tabela" layoutX="10.0" layoutY="6.0" prefHeight="750.0" prefWidth="781.0">
+            <columns>
+                <TableColumn fx:id="idofertyColumn" prefWidth="180.0" text="Id oferty" />
+                <TableColumn fx:id="nazwaColumn" prefWidth="260.0" text="Nazwa" />
+                <TableColumn fx:id="cenaColumn" prefWidth="170.0" text="Cena" />
+                <TableColumn fx:id="gramaturaColumn" prefWidth="170.0" text="Gramatura" />
+            </columns>
+        </TableView>
+        <Button fx:id="wroc" layoutX="21.0" layoutY="757.0" mnemonicParsing="false" onAction="#wroc" prefHeight="29.0" prefWidth="74.0" text="Wroc" />
+        <Button fx:id="refresh1" layoutX="699.0" layoutY="757.0" mnemonicParsing="false" onAction="#refresh" prefHeight="29.0" prefWidth="74.0" text="Odswież" />
+    </children>
+</AnchorPane>

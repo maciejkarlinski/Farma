@@ -1,0 +1,450 @@
+@startuml
+
+title __PROJEKT_BAZY_DANYCH_MYSQL's Class Diagram__\n
+
+  namespace Client {
+    class Client.ChatClient {
+    }
+  }
+  
+
+  namespace Client {
+    class Client.Uzytkownik {
+    }
+  }
+  
+
+  namespace application {
+    class application.AdminAnulujZamowienia {
+    }
+  }
+  
+
+  namespace application {
+    class application.AdminDodajDostawce {
+    }
+  }
+  
+
+  namespace application {
+    class application.AdminDodajPracownika {
+    }
+  }
+  
+
+  namespace application {
+    class application.AdminMain {
+    }
+  }
+  
+
+  namespace application {
+    class application.AdminSzczegolyZamowienia {
+    }
+  }
+  
+
+  namespace application {
+    class application.AdminUsunDostawce {
+    }
+  }
+  
+
+  namespace application {
+    class application.AdminUsunPracownika {
+    }
+  }
+  
+
+  namespace application {
+    class application.AdminWyswietlDostawce {
+    }
+  }
+  
+
+  namespace application {
+    class application.AdminWyswietlKlientow {
+    }
+  }
+  
+
+  namespace application {
+    class application.AdminWyswietlKonta {
+    }
+  }
+  
+
+  namespace application {
+    class application.AdminWyswietlPracownikow {
+    }
+  }
+  
+
+  namespace application {
+    class application.AdminWyswietlZamowienia {
+    }
+  }
+  
+
+  namespace application {
+    class application.AdminZablokujOdblokuj {
+    }
+  }
+  
+
+  namespace application {
+    class application.AdminZmianaHasla {
+    }
+  }
+  
+
+  namespace application {
+    class application.AdminZmianaZamowienia {
+    }
+  }
+  
+
+  namespace application {
+    class application.AdminZmienWyplate {
+    }
+  }
+  
+
+  namespace application {
+    class application.DostawaFX {
+    }
+  }
+  
+
+  namespace application {
+    class application.DostawcaFX {
+    }
+  }
+  
+
+  namespace application {
+    class application.FakturaFX {
+    }
+  }
+  
+
+  namespace application {
+    class application.FakturaKlientFX {
+    }
+  }
+  
+
+  namespace application {
+    class application.KlientDodajZamowienie {
+    }
+  }
+  
+
+  namespace application {
+    class application.KlientFX {
+    }
+  }
+  
+
+  namespace application {
+    class application.KlientMain {
+    }
+  }
+  
+
+  namespace application {
+    class application.KoszykFx {
+    }
+  }
+  
+
+  namespace application {
+    class application.LekFX1 {
+    }
+  }
+  
+
+  namespace application {
+    class application.LekFx {
+    }
+  }
+  
+
+  namespace application {
+    class application.LoginController {
+    }
+  }
+  
+
+  namespace application {
+    class application.MagazynFX {
+    }
+  }
+  
+
+  namespace application {
+    class application.MainApp {
+    }
+  }
+  
+
+  namespace application {
+    class application.OfertaFX {
+    }
+  }
+  
+
+  namespace application {
+    class application.OfertyFX {
+    }
+  }
+  
+
+  namespace application {
+    class application.OfficeDodajLek {
+    }
+  }
+  
+
+  namespace application {
+    class application.OfficeDodajOferte {
+    }
+  }
+  
+
+  namespace application {
+    class application.OfficeDodajSurowiec {
+    }
+  }
+  
+
+  namespace application {
+    class application.OfficeMain {
+    }
+  }
+  
+
+  namespace application {
+    class application.OfficeUsun {
+    }
+  }
+  
+
+  namespace application {
+    class application.OfficeWystawFakture {
+    }
+  }
+  
+
+  namespace application {
+    class application.OfficeWyswietlFaktury {
+    }
+  }
+  
+
+  namespace application {
+    class application.OfficeWyswietlLeki {
+    }
+  }
+  
+
+  namespace application {
+    class application.OfficeWyswietlOferte {
+    }
+  }
+  
+
+  namespace application {
+    class application.OfficeWyswietlSurowce {
+    }
+  }
+  
+
+  namespace application {
+    class application.OfficeZmianaHasla {
+    }
+  }
+  
+
+  namespace application {
+    class application.OsobaFX {
+    }
+  }
+  
+
+  namespace application {
+    class application.PracownikFX {
+    }
+  }
+  
+
+  namespace application {
+    class application.ProdukcjaMain {
+    }
+  }
+  
+
+  namespace application {
+    class application.ProdukcjaWyswietlZamowienia {
+    }
+  }
+  
+
+  namespace application {
+    class application.ProdukcjaZmianaHasla {
+    }
+  }
+  
+
+  namespace application {
+    class application.ProdukcjaZmianaZamowienia {
+    }
+  }
+  
+
+  namespace application {
+    class application.RecoverPasswordController {
+    }
+  }
+  
+
+  namespace application {
+    class application.RegisterController {
+    }
+  }
+  
+
+  namespace application {
+    class application.ScreenController {
+    }
+  }
+  
+
+  namespace application {
+    class application.StoreAktualizuj {
+    }
+  }
+  
+
+  namespace application {
+    class application.StoreDodajSurowiec {
+    }
+  }
+  
+
+  namespace application {
+    class application.StoreMain {
+    }
+  }
+  
+
+  namespace application {
+    class application.StoreNowaDostawa {
+    }
+  }
+  
+
+  namespace application {
+    class application.StoreWyswietlDostawy {
+    }
+  }
+  
+
+  namespace application {
+    class application.StoreWyswietlMagazyn {
+    }
+  }
+  
+
+  namespace application {
+    class application.StoreWyswietlSurowce {
+    }
+  }
+  
+
+  namespace application {
+    class application.StoreZmianaHasla {
+    }
+  }
+  
+
+  namespace application {
+    class application.SurowiecFX {
+    }
+  }
+  
+
+  namespace application {
+    class application.SzczegolyZamowieniaFX {
+    }
+  }
+  
+
+  namespace application {
+    class application.ZamowieniaKlientaFx {
+    }
+  }
+  
+
+  namespace application {
+    class application.ZamowienieFX {
+    }
+  }
+  
+
+  application.AdminAnulujZamowienia .up.|> javafx.fxml.Initializable
+  application.AdminDodajDostawce .up.|> javafx.fxml.Initializable
+  application.AdminDodajPracownika .up.|> javafx.fxml.Initializable
+  application.AdminMain .up.|> javafx.fxml.Initializable
+  application.AdminSzczegolyZamowienia .up.|> javafx.fxml.Initializable
+  application.AdminUsunDostawce .up.|> javafx.fxml.Initializable
+  application.AdminUsunPracownika .up.|> javafx.fxml.Initializable
+  application.AdminWyswietlDostawce .up.|> javafx.fxml.Initializable
+  application.AdminWyswietlKlientow .up.|> javafx.fxml.Initializable
+  application.AdminWyswietlKonta .up.|> javafx.fxml.Initializable
+  application.AdminWyswietlPracownikow .up.|> javafx.fxml.Initializable
+  application.AdminWyswietlZamowienia .up.|> javafx.fxml.Initializable
+  application.AdminZablokujOdblokuj .up.|> javafx.fxml.Initializable
+  application.AdminZmianaHasla .up.|> javafx.fxml.Initializable
+  application.AdminZmianaZamowienia .up.|> javafx.fxml.Initializable
+  application.AdminZmienWyplate .up.|> javafx.fxml.Initializable
+  application.FakturaKlientFX -up-|> application.FakturaFX
+  application.KlientDodajZamowienie .up.|> javafx.fxml.Initializable
+  application.KlientMain .up.|> javafx.fxml.Initializable
+  application.LoginController .up.|> javafx.fxml.Initializable
+  application.MainApp -up-|> javafx.application.Application
+  application.OfficeDodajLek .up.|> javafx.fxml.Initializable
+  application.OfficeDodajOferte .up.|> javafx.fxml.Initializable
+  application.OfficeDodajSurowiec .up.|> javafx.fxml.Initializable
+  application.OfficeMain .up.|> javafx.fxml.Initializable
+  application.OfficeUsun .up.|> javafx.fxml.Initializable
+  application.OfficeWystawFakture .up.|> javafx.fxml.Initializable
+  application.OfficeWyswietlFaktury .up.|> javafx.fxml.Initializable
+  application.OfficeWyswietlLeki .up.|> javafx.fxml.Initializable
+  application.OfficeWyswietlOferte .up.|> javafx.fxml.Initializable
+  application.OfficeWyswietlSurowce .up.|> javafx.fxml.Initializable
+  application.OfficeZmianaHasla .up.|> javafx.fxml.Initializable
+  application.ProdukcjaMain .up.|> javafx.fxml.Initializable
+  application.ProdukcjaWyswietlZamowienia .up.|> javafx.fxml.Initializable
+  application.ProdukcjaZmianaHasla .up.|> javafx.fxml.Initializable
+  application.ProdukcjaZmianaZamowienia .up.|> javafx.fxml.Initializable
+  application.RecoverPasswordController .up.|> javafx.fxml.Initializable
+  application.RegisterController .up.|> javafx.fxml.Initializable
+  application.StoreAktualizuj .up.|> javafx.fxml.Initializable
+  application.StoreDodajSurowiec .up.|> javafx.fxml.Initializable
+  application.StoreMain .up.|> javafx.fxml.Initializable
+  application.StoreNowaDostawa .up.|> javafx.fxml.Initializable
+  application.StoreWyswietlDostawy .up.|> javafx.fxml.Initializable
+  application.StoreWyswietlMagazyn .up.|> javafx.fxml.Initializable
+  application.StoreWyswietlSurowce .up.|> javafx.fxml.Initializable
+  application.StoreZmianaHasla .up.|> javafx.fxml.Initializable
+
+
+right footer
+
+
+PlantUML diagram generated by SketchIt! (https://bitbucket.org/pmesmeur/sketch.it)
+For more information about this tool, please contact philippe.mesmeur@gmail.com
+endfooter
+
+@enduml

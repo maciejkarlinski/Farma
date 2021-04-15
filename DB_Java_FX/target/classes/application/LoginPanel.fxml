@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="617.0" prefWidth="637.0" stylesheets="@application.css" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.LoginController">
+   <children>
+      <Pane fx:id="loginBody" layoutY="-1.0" prefHeight="800.0" prefWidth="800.0" stylesheets="@application.css">
+         <children>
+            <Pane fx:id="loginPane" layoutX="33.0" layoutY="48.0" prefHeight="302.0" prefWidth="396.0" stylesheets="@application.css">
+               <children>
+                  <PasswordField fx:id="passwordField" layoutX="240.0" layoutY="356.0" prefHeight="35.0" prefWidth="287.0" promptText="haslo" style="-fx-background-color: white;">
+                     <font>
+                        <Font size="14.0" />
+                     </font></PasswordField>
+                  <TextField fx:id="emailField" layoutX="240.0" layoutY="273.0" prefHeight="35.0" prefWidth="287.0" promptText="e-mail" style="-fx-background-color: white;">
+                     <font>
+                        <Font size="14.0" />
+                     </font></TextField>
+                  <Button fx:id="loginButton" layoutX="441.0" layoutY="423.0" mnemonicParsing="false" onAction="#loginButtonClick" prefHeight="35.0" prefWidth="86.0" style="-fx-background-color: GREY;" text="Zaloguj się" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font></Button>
+                  <Label layoutX="240.0" layoutY="237.0" text="E-mail" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="322.0" layoutY="405.0" />
+                  <Label fx:id="tablet_label" layoutX="322.0" layoutY="405.0" text=" " textFill="WHITE" />
+                  <Label layoutX="237.0" layoutY="319.0" text="Hasło:" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+                  </Label>
+                  <Hyperlink fx:id="registerHyperlink" layoutX="237.0" layoutY="412.0" onAction="#registerHyperlinkClick" text="Załóż konto" textFill="#f2f2f2">
+                     <font>
+                        <Font size="20.0" />
+                     </font></Hyperlink>
+               </children>
+            </Pane>
+            <ImageView fx:id="muggles_view" fitHeight="155.0" fitWidth="350.0" layoutX="436.0" layoutY="631.0" pickOnBounds="true" preserveRatio="true" />
+            <Hyperlink fx:id="recoveryHiperLink" layoutX="268.0" layoutY="502.0" onAction="#recoveryHyperlinkClick" text="Przypomnienie hasla" textFill="WHITE">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Hyperlink>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
